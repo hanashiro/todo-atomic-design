@@ -1,0 +1,23 @@
+import { Schema, model, models } from 'mongoose';
+
+export const {{name}}Schema = new Schema({
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    total: Number,
+    publishedAt: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: String,
+        required: true,
+    },
+    isVisible: Boolean,
+});
+
+{{name}}Schema.index({ userId: 1 });
+
+export const {{name}}Model = models['{{name}}'] || model('{{name}}', {{name}}Schema);
+

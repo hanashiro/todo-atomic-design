@@ -1,0 +1,6 @@
+export interface I{{name}} {
+    userId: string;
+}
+
+export interface ICreate{{name}}
+    extends Omit<I{{name}}, 'userId'> {}

@@ -1,0 +1,25 @@
+import { I{{name}} } from './{{camelCase name}}.dto';
+import { {{name}} } from './{{camelCase name}}.entity';
+import { I{{name}}Provider } from './{{camelCase name}}.provider.abstract';
+
+export class {{name}}Provider implements I{{name}}Provider {
+
+
+    // constructor() {}
+
+    async create({{camelCase name}}: I{{name}}): Promise<{{name}}> {
+        throw new Error('Method not implemented.');
+    }
+    async findById(id: string): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+    async list(): Promise<{{name}}[]> {
+        throw new Error('Method not implemented.');
+    }
+    async update({{camelCase name}}: Partial<{{name}}>): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+    async delete(id: string): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+}

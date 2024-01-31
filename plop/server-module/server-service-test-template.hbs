@@ -1,0 +1,41 @@
+/**
+ * @jest-environment node
+ */
+// import { faker } from '@faker-js/faker';
+import { {{name}}Repository } from './{{camelCase name}}.repository';
+import { {{name}}Provider } from './{{camelCase name}}.provider';
+import { {{name}}Service } from './{{camelCase name}}.service';
+
+jest.mock('./{{camelCase name}}.repository');
+jest.mock('./{{camelCase name}}.provider');
+
+describe('{{name}}Service', () => {
+    let {{camelCase name}}Repository: {{name}}Repository;
+    let {{camelCase name}}Provider: {{name}}Provider;
+    let {{camelCase name}}Service: {{name}}Service;
+
+    // beforeAll(() => {
+    //     jest.useFakeTimers();
+    //     jest.spyOn(global, 'setTimeout');
+    // });
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        {{camelCase name}}Repository = new {{name}}Repository({} as any, {} as any);
+        {{camelCase name}}Provider = new {{name}}Provider();
+        {{camelCase name}}Service = new {{name}}Service({{camelCase name}}Repository, {{camelCase name}}Provider);
+    });
+
+    // afterAll(() => {
+    //     jest.useRealTimers();
+    //     jest.clearAllTimers();
+    // });
+
+    it.skip('should test {{name}}Service', async () => {
+        {{camelCase name}}Repository.create = jest.fn().mockReturnValue(123);
+
+        expect(() => {{camelCase name}}Service.create({} as any)).rejects.toThrow(
+            'Method not implemented.',
+        );
+    });
+});

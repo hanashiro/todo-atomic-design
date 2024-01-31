@@ -1,0 +1,43 @@
+/**
+ * @jest-environment node
+ */
+// import { faker } from '@faker-js/faker';
+import { baseMock } from '@server/base/base.mock';
+import { {{name}}Controller } from './{{camelCase name}}.controller';
+import { {{name}}Service } from './{{camelCase name}}.service';
+import { getServerSession } from 'next-auth';
+
+jest.mock('./{{camelCase name}}.service');
+jest.mock('next-auth', () => ({
+    getServerSession: jest.fn(),
+}));
+
+describe('{{name}}Controller', () => {
+    let {{camelCase name}}Service: {{name}}Service;
+    let {{camelCase name}}Controller: {{name}}Controller;
+
+    // beforeAll(() => {
+    //     jest.useFakeTimers();
+    //     jest.spyOn(global, 'setTimeout');
+    // });
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        {{camelCase name}}Service = new {{name}}Service({} as any);
+        {{camelCase name}}Controller = new {{name}}Controller({{camelCase name}}Service, {} as any);
+        {{camelCase name}}Controller.getSession = jest.fn().mockReturnValue(baseMock);
+    });
+
+    // afterAll(() => {
+    //     jest.useRealTimers();
+    //     jest.clearAllTimers();
+    // });
+
+    it.skip('should test {{name}}Controller', async () => {
+        {{camelCase name}}Service.create = jest.fn().mockReturnValue(123);
+
+        expect(() =>
+            {{camelCase name}}Controller.create({} as any, {} as any),
+        ).rejects.toThrow('Method not implemented.');
+    });
+});

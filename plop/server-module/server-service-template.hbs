@@ -1,0 +1,31 @@
+import { I{{name}} } from './{{camelCase name}}.dto';
+import { {{name}} } from './{{camelCase name}}.entity';
+import { {{name}}Repository } from './{{camelCase name}}.repository';
+import { {{name}}Provider } from './{{camelCase name}}.provider';
+import { I{{name}}Service } from './{{camelCase name}}.service.abstract';
+
+export class {{name}}Service implements I{{name}}Service {
+    #repository: {{name}}Repository;
+    #provider: {{name}}Provider;
+
+    constructor(repository: {{name}}Repository, provider: {{name}}Provider) {
+        this.#repository = repository;
+        this.#provider = provider;
+    }
+
+    async create({{camelCase name}}: I{{name}}): Promise<{{name}}> {
+        throw new Error('Method not implemented.');
+    }
+    async findById(id: string): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+    async list(): Promise<{{name}}[]> {
+        throw new Error('Method not implemented.');
+    }
+    async update({{camelCase name}}: Partial<{{name}}>): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+    async delete(id: string): Promise<{{name}} | null> {
+        throw new Error('Method not implemented.');
+    }
+}

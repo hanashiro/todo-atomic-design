@@ -1,0 +1,29 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { {{name}}Service } from './{{camelCase name}}.service';
+import { AuthOptions } from 'next-auth';
+import { BaseController } from '@server/base/base.controller';
+
+export class {{name}}Controller extends BaseController {
+    #service: {{name}}Service;
+
+    constructor(service: {{name}}Service, authOptions: AuthOptions) {
+        super(authOptions);
+        this.#service = service;
+    }
+
+    async create(req: NextApiRequest, res: NextApiResponse) {
+        throw new Error('Method not implemented.');
+    }
+
+    async list(req: NextApiRequest, res: NextApiResponse) {
+        throw new Error('Method not implemented.');
+    }
+
+    async update(req: NextApiRequest, res: NextApiResponse) {
+        throw new Error('Method not implemented.');
+    }
+
+    async deleteById(req: NextApiRequest, res: NextApiResponse) {
+        throw new Error('Method not implemented.');
+    }
+}

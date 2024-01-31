@@ -1,0 +1,10 @@
+import { I{{name}} } from './{{camelCase name}}.dto';
+import { {{name}} } from './{{camelCase name}}.entity';
+
+export interface I{{name}}Provider {
+    create({{camelCase name}}: I{{name}}): Promise<{{name}}>;
+    findById(id: string): Promise<{{name}} | null>;
+    list(): Promise<{{name}}[]>;
+    update({{camelCase name}}: Partial<{{name}}>): Promise<{{name}} | null>;
+    delete(id: string): Promise<{{name}} | null>;
+}

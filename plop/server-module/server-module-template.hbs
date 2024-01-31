@@ -1,0 +1,14 @@
+import mongo from '@server/db/mongo';
+import { {{name}}Model } from './{{camelCase name}}.schema';
+import { {{name}}Repository } from './{{camelCase name}}.repository';
+import { {{name}}Provider } from './{{camelCase name}}.provider';
+import { {{name}}Service } from './{{camelCase name}}.service';
+import { {{name}}Controller } from './{{camelCase name}}.controller';
+import { authOptions } from 'pages/api/auth/[...nextauth]';
+
+const {{camelCase name}}Repository = new {{name}}Repository({{name}}Model, mongo);
+const {{camelCase name}}Provider = new {{name}}Provider();
+const {{camelCase name}}Service = new {{name}}Service({{camelCase name}}Repository, {{camelCase name}}Provider);
+const {{camelCase name}}Controller = new {{name}}Controller({{camelCase name}}Service, authOptions);
+
+export { {{camelCase name}}Repository, {{camelCase name}}Provider, {{camelCase name}}Service, {{camelCase name}}Controller };

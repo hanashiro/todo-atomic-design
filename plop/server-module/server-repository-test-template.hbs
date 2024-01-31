@@ -1,0 +1,45 @@
+/**
+ * @jest-environment node
+ */
+import mongo from '@server/db/mongo';
+import { faker } from '@faker-js/faker';
+import { Types } from 'mongoose';
+import { {{name}}Repository } from './{{camelCase name}}.repository';
+import { {{name}}Model } from './{{camelCase name}}.schema';
+import { {{name}} } from './{{camelCase name}}.entity';
+import { I{{name}} } from './{{camelCase name}}.dto';
+import { SetupTestDatabase } from '@server/db/test/setupTestDatabase';
+
+jest.mock('@server/db/mongo');
+
+let {{camelCase name}}Repository: {{name}}Repository;
+
+describe('{{name}}Repository', () => {
+    beforeAll(async () => {
+        mongo.connect();
+        {{camelCase name}}Repository = new {{name}}Repository({{name}}Model, mongo);
+    });
+
+    beforeEach(async () => {
+        jest.clearAllMocks();
+        await SetupTestDatabase.insertUsers();
+        // await Promise.all([].map((data) => {{name}}Model.create(data)));
+    });
+
+    afterEach(async () => {
+        await SetupTestDatabase.clearCollections();
+    });
+
+    afterAll(async () => {
+        await SetupTestDatabase.dropCollections();
+        await mongo.disconnect();
+    });
+
+    it('getById - should return a {{name}}', async () => {
+        const id = new Types.ObjectId().toHexString();
+        // const {{camelCase name}} = await {{camelCase name}}Repository.findById(id);
+
+        // expect({{camelCase name}}).toBeNull();
+        expect(true).toBeTruthy();
+    })
+})

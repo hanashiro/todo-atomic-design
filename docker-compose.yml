@@ -1,0 +1,14 @@
+version: '3'
+services:
+    front:
+        tty: true
+        build:
+            context: .
+            dockerfile: Dockerfile
+        working_dir: /usr/src/app
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - '${FRONT_PORT}:${FRONT_PORT}'
+        env_file:
+            - .env
