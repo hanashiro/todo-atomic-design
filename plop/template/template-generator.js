@@ -46,6 +46,11 @@ module.exports = function (plop, handlers) {
                     templateFile:
                         'plop/template/template-logic-test-template.hbs',
                 },
+                {
+                    type: 'add',
+                    path: `src/ui/templates/${folder}/${fileName}/${data.name}.stories.tsx`,
+                    templateFile: 'plop/template/template-story-template.hbs',
+                },
             ];
 
             return actions;

@@ -1,0 +1,25 @@
+import { ReactNode } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+
+import {{name}} from './{{name}}';
+
+const meta = {
+    title: 'template/{{name}}',
+    component: (props) => {{name}}(props.page),
+    parameters: {
+        layout: 'centered',
+    },
+    tags: ['autodocs'],
+    argTypes: {},
+} satisfies Meta<{
+    page: ReactNode;
+}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    args: {
+        page: <div>{{name}} Content</div>,
+    }
+};
