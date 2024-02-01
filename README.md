@@ -31,6 +31,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     - [Material-UI](#material-ui)
       - [How can it be faster and more efficient?](#how-can-it-be-faster-and-more-efficient)
     - [Zustand and Zustood](#zustand-and-zustood)
+    - [Conventional Commits](#conventional-commits)
 
 ## Getting Started
 
@@ -293,3 +294,9 @@ It is recommended to use Zustand instead of Redux to maintain the standardizatio
 Zustood is a library that provides a set of hooks and utilities to work with Zustand, solving common problems and providing a better developer experience.
 
 Each page has its own Zustood Store to manage its state. You can define Global Stores, but avoid using for small components.
+
+### Conventional Commits
+
+The project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to maintain the standardization of the commits and to have a better understanding of the changes in the project.
+
+To help you to write the commits, you can use the [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) extension for VS Code or the [Commitizen](https://www.npmjs.com/package/commitizen) NPM package.
