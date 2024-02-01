@@ -42,7 +42,6 @@ const Header: React.FC<HeaderProps> = ({
                         edge="end"
                         color="inherit"
                         aria-label="Change Theme"
-                        sx={{ mr: 2 }}
                         onClick={onThemeChange}
                     >
                         <i className={`fas fa-fw fa-${nextThemeIcon}`} />
