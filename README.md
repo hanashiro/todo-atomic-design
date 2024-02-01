@@ -27,6 +27,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     - [Hooks and Logic Files](#hooks-and-logic-files)
   - [No Run Development](#no-run-development)
   - [Other Tools](#other-tools)
+    - [Immer](#immer)
     - [Material-UI](#material-ui)
       - [How can it be faster and more efficient?](#how-can-it-be-faster-and-more-efficient)
     - [Zustand and Zustood](#zustand-and-zustood)
@@ -256,6 +257,14 @@ The main idea is to use tools like Storybook and Jest to develop and test the co
 In the end, you'll have a project that is already tested and with the components and logic developed and ready to be integrated into the project.
 
 ## Other Tools
+
+### Immer
+
+The project uses [Immer](https://immerjs.github.io/immer/) to work with immutable state. It is a tiny package that allows you to work with immutable state in a more convenient way.
+
+Winner of the "Breakthrough of the year" React open source award and "Most impactful contribution" JavaScript open source award in 2019.
+
+With Immer, you can write code that looks like mutable code, but it is actually immutable. It is a good way to maintain the standardization of the project and to have a simpler and more efficient state management.
 
 ### Material-UI
 
