@@ -1,7 +1,7 @@
 class StorageBase {
     constructor(private storage: Storage) {}
 
-    get<T>(key: string, defaultValue: T): T | string {
+    get<T>(key: string, defaultValue: T): T {
         const value = this.storage.getItem(key);
         if (value === null) {
             return defaultValue;
@@ -9,7 +9,7 @@ class StorageBase {
         try {
             return JSON.parse(value) as T;
         } catch (error) {
-            return value;
+            return value as T;
         }
     }
 
