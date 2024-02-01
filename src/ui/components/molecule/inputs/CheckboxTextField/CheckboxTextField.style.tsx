@@ -5,4 +5,5 @@ export const ComponentContainer = styled('div')`
     display: flex;
     align-items: center;
     gap: ${({ theme }) => theme.spacing(1)};
+    width: 100%;
 `;
