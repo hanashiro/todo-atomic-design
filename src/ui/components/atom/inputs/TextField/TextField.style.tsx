@@ -5,6 +5,7 @@ export const ComponentContainer = styled('div', {
     shouldForwardProp: (prop) => prop !== 'isStroked',
 })<{ isStroked?: boolean }>`
     position: relative;
+    width: 100%;
 
     &::after {
         content: '';
