@@ -21,5 +21,5 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         page: <div>SingleColumn Content</div>,
-    }
+    },
 };

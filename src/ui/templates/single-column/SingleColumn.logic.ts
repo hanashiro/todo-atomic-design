@@ -1,6 +1,3 @@
-
 export class SingleColumnTemplateLogic {
-    static MyFunction() {
-        
-    }
+    static MyFunction() {}
 }

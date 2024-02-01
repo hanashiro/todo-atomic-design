@@ -13,6 +13,5 @@ export function useSingleColumnTemplate() {
 
     // #endregion
 
-
-    return {}
+    return {};
 }
