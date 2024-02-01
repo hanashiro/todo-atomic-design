@@ -4,7 +4,7 @@ import TaskList from '@components/organism/data-display/TaskList/TaskList';
 import { NextPageWithLayout } from '@typing/_app';
 
 import SingleColumn from '@templates/single-column/SingleColumn';
-// import { Component } from '@partials/index/Index.styled';
+import { Banner, ListPaper } from '@partials/index/Index.styled';
 import { useIndexPage } from '@partials/index/Index.hook';
 // import { IndexPageLogic } from '@partials/index/Index.logic';
 // import { IndexPageStore } from '@partials/index/Index.store';
@@ -28,20 +28,25 @@ export default function Index(props: IndexProps) {
     return (
         <Stack
             sx={{
-                mx: 'auto',
-                my: 5,
-                p: 2,
+                py: 2,
             }}
             justifyContent={'center'}
             alignItems={'center'}
             gap={5}
         >
+            <Banner />
             <Stack direction={'row'} gap={2}>
-                <Button onClick={checkAllTasks}>Check All</Button>
-                <Button onClick={uncheckAllTasks}>Uncheck All</Button>
-                <Button onClick={clearCompletedTasks}>Clear Completed</Button>
+                <Button variant="contained" onClick={checkAllTasks}>
+                    Check All
+                </Button>
+                <Button variant="contained" onClick={uncheckAllTasks}>
+                    Uncheck All
+                </Button>
+                <Button variant="contained" onClick={clearCompletedTasks}>
+                    Clear Completed
+                </Button>
             </Stack>
-            <Paper sx={{ p: 2, width: '100%', maxWidth: '45rem' }}>
+            <ListPaper>
                 <Button
                     endIcon={<i className="fas fa-plus" />}
                     fullWidth
@@ -61,7 +66,7 @@ export default function Index(props: IndexProps) {
                 >
                     Add Task
                 </Button>
-            </Paper>
+            </ListPaper>
         </Stack>
     );
 }

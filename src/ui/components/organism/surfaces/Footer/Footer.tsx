@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = () => {
             bgcolor={'background.paper'}
             sx={{ mt: 'auto', px: 2, py: 1 }}
         >
-            <Typography variant="body2" align="center">
+            <Typography variant="body2" align="center" color={'text.secondary'}>
                 Made with <i className="fas fa-heart" /> by{' '}
                 <Link
                     href="https://hanashiro.vercel.app/"
